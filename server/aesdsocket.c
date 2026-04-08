@@ -98,12 +98,12 @@ int main(int argc, char *argv[])
         if (chdir("/") == -1) {
             syslog(LOG_ERR, "Failed to chdir: %s", strerror(errno));
         }
-        close(STDIN_FILENO);
-        close(STDOUT_FILENO);
-        close(STDERR_FILENO);
-        open("/dev/null", O_RDONLY); // stdin
-        open("/dev/null", O_WRONLY); // stdout
-        open("/dev/null", O_WRONLY); // stderr
+        // close(STDIN_FILENO);
+        // close(STDOUT_FILENO);
+        // close(STDERR_FILENO);
+        // open("/dev/null", O_RDONLY); // stdin
+        // open("/dev/null", O_WRONLY); // stdout
+        // open("/dev/null", O_WRONLY); // stderr
     }
 
     int listres = listen(sockfd, 5);
