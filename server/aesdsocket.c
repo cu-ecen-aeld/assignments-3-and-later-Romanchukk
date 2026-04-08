@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
 
     printf("Start: %s\n", APP_LOG_TAG);
     openlog(APP_LOG_TAG, LOG_PID, APP_LOG_LEVEL);
+    syslog(LOG_INFO, "Running "__FILE__);
 
     struct sigaction sa;
     memset(&sa, 0, sizeof(sa));
