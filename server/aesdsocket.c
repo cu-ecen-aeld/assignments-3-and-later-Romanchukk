@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
     struct sockaddr_in addr = {
         .sin_family = AF_INET,
         .sin_port = htons(APP_SOCKET_DEFAULT_PORT),
-        .sin_addr = { .s_addr = inet_addr("127.0.0.1") }
+        .sin_addr = { .s_addr = INADDR_ANY }
     };
 
     int bindres = bind(sockfd, (struct sockaddr *) &addr, sizeof(addr));
