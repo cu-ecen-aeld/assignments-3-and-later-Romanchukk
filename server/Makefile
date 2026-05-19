@@ -3,9 +3,9 @@
 
 # Cross-compilation support
 CROSS_COMPILE ?=
-CC = $(CROSS_COMPILE)gcc
-CFLAGS = -Wall -Wextra -O1 -pthread
-LDFLAGS = -pthread
+CC ?= $(CROSS_COMPILE)gcc
+CFLAGS ?= -Wall -Wextra -O1 -pthread
+LDFLAGS ?= -pthread
 
 # Target executable name
 TARGET = aesdsocket
